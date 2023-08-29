@@ -1,0 +1,21 @@
+name: Deploy html slides to GitHub Pages
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        
+      - name: Copy HTML files to public folder for deployment
+        run: |
+          mkdir -p public
+          cp slides public
+          cp labs public
+          cp index.html public
+          # find . -maxdepth 1 -name '*.html' -exec cp {} public/ \;
+          
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with: 
+          folder: public
