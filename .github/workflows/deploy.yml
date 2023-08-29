@@ -10,11 +10,11 @@ jobs:
       - name: Copy HTML files to public folder for deployment
         run: |
           mkdir -p public
-          cp slides public
-          cp labs public
-          cp index.html public
+          cp -r slides public/
+          cp -r labs public/
+          cp index.html public/
           # find . -maxdepth 1 -name '*.html' -exec cp {} public/ \;
-          
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with: 
