@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>MA321 Lab 1</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+    sans-serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      background-color: #f0f0f0;
+      padding: .2em .4em;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      background-color: #f0f0f0;
+      padding: 1em;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">MA321 Lab 1</h1>
+<p class="subtitle">Introduction to Excel Spreadsheet</p>
+</header>
+<h2 id="getting-start">Getting Start</h2>
+<ul>
+<li>When you run the Microsoft Excel app, you likely will see the
+following startup screen.</li>
+</ul>
+<p><img src="img/Excel-StartScreen.png" alt="Excel start up screen" style="zoom: 50%;" /></p>
+<ul>
+<li>After open an black workbook, the screen with a grid you see is a
+worksheet. Worksheets are part of a workbook with a file name like
+book1.xlsx, but you can rename it to any file name when you save your
+file.</li>
+</ul>
+<p><img src="img/Outlook-of-a-workbook.png" alt="Overview of an Excel workbook" style="zoom: 50%;" /></p>
+<ul>
+<li>In a worksheet, you will see the following things.
+<ul>
+<li><strong>Cell</strong> A cell is a rectangular block in a worksheet.
+A cell is a storage box that holds information you entered. An active
+Cell is one that is currently being editing.</li>
+<li><strong>Columns and Rows</strong> Columns and rows are used to
+locate cells.</li>
+<li><strong>Column and Row headings</strong> Columns and rows are
+labeled by letters and numbers which are called headings. Clicking on a
+heading will select the entire row or column.</li>
+<li><strong>Ribbon</strong> Above a workbook is a section of commands
+and tabs called the Ribbon.</li>
+<li><a name="cell_reference"><strong>Cell Reference</strong></a> A cell
+reference is a combination of the column letter and the row number. For
+example, A1 refers to the cell located at where column A and row 1
+intersect.</li>
+<li><strong>Formula Bar</strong> Between the ribbon and column heading,
+one will find the formula bar. The Formula Bar will display the content
+of an active cell.</li>
+</ul></li>
+</ul>
+<h2 id="selecting-referring-to-and-formatting-cells">Selecting,
+Referring to, and Formatting Cells</h2>
+<ul>
+<li><p>Excel has some formatting options that can be used change the
+appearance of cells. To format cells, you have to highlight (select)
+those cells that you want to format.</p>
+<ul>
+<li>To select cells in a rectangular region, first select a cell in a
+corner of the region, then <strong>either</strong>
+<ul>
+<li>hold the left-click button of the mouse and drag to the diagonal
+corner of the region, <strong>or</strong></li>
+<li>click and hold the <code>Shift</code> key and the keyboard and then
+select the cell in the diagonal corner of the region.</li>
+</ul></li>
+<li>To select several cells in different regions, you can click hold the
+<code>Ctrl</code> (<code>Cmd</code> on Mac) key on the keyboard and then
+select the cells using the mouse.</li>
+</ul>
+<p><strong>Superuser Tips:</strong> Holding <code>Ctrl</code> and using
+drag to select can select multiple regions.</p></li>
+<li><p>Cells can be referred using their <a
+href="#cell_reference">references</a>. In formulas, to refer to multiple
+cells, you can use the above mentioned selecting method or type in cell
+references. For cells in a range, Excel uses <code>:</code> to mean the
+word “to”. For example, cells from A1 to A10 can be written as
+<code>A1:A10</code> in an Excel formula. For a collections of individual
+cells, Excel uses <code>,</code> to separate them. For example,
+<code>A1,A3,A4,A6</code>.</p>
+<p><strong>Superuser Tips:</strong> Column and row headings are
+variables. Excel can automatically produce data in continued blank cells
+according the formulas (pattern) in previous cells. To tell Excel to fix
+a column heading or row heading or cell reference in a formula, we add
+the <code>$</code> sign in front of the column heading and/or the row
+heading. For example, <code>$A$1</code> is an absolute cell
+reference.</p></li>
+<li><p>Excel has many built-in functions for formatting cells. You may
+find those formatting commands in the ribbon. One of the those
+formatting commands that we will is to merge cells. Note that merging
+cell only keeps the upper-left value and discords other values.</p>
+<p><strong>Example:</strong> To merge the cell <code>A1</code> to
+<code>B1</code> into one cell and center the text, we select those two
+cells and then click to run the command <code>Merge &amp; Center</code>
+under the <code>Home</code> tab. Suppose that <code>A1</code> and
+<code>B1</code> have the values “Merge” and “cell”, after merging, only
+the value “Merge” will be kept in the merged cell.</p>
+<p><img src="img/Merge-cells.gif" alt="Merge-cells" style="zoom: 67%;" /></p></li>
+</ul>
+<h2 id="formulas-and-operators">Formulas and Operators</h2>
+<ul>
+<li><p>A <strong>formula</strong> is an expression inside a cell that is
+used to produce a value. A formula must begin with an equal
+<code>=</code> sign which tells Excel to evaluate the expression and
+produce a value. A formula could be a mathematical expression, cell
+references, or Excel functions.</p></li>
+<li><p><strong>Excel functions</strong> are pre-built formulas in Excel.
+Here are a few examples</p>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Formula</strong></th>
+<th style="text-align: left;"><strong>Performance</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>average()</code></td>
+<td style="text-align: left;">Calculate the average of a group of
+numbers</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>sum()</code></td>
+<td style="text-align: left;">Calculate the total of a group of
+numbers</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>round()</code></td>
+<td style="text-align: left;">Round a number</td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Operators</strong> are symbols or signs that indicate how
+calculation should be done in an expression. In Excel, operators
+includes not only arithmetic operators but also text concatenation,
+logical and reference operators. For example, the text concatenation of
+“Tool” and “box” can be done by <code>"Tool"&amp;"box"</code>. The
+following are tables of Excel operators by their types.</p>
+<ul>
+<li>Arithmetic Operators and their order of operations</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 31%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Operator</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Order of Operation (smaller number=
+higher priority)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>%</code></td>
+<td style="text-align: left;">The percent operator</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>^</code></td>
+<td style="text-align: left;">The exponentiation operator</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>*</code></td>
+<td style="text-align: left;">The multiplication operator</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>/</code></td>
+<td style="text-align: left;">The division operator</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>+</code></td>
+<td style="text-align: left;">The addition operator</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>-</code></td>
+<td style="text-align: left;">The subtraction operator</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Text concatenation</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Operator</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>&amp;</code></td>
+<td style="text-align: left;">Combine text strings</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Logical operators</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Operator</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">=</td>
+<td style="text-align: left;">Equal to</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">&gt;</td>
+<td style="text-align: left;">Greater than</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">&lt;</td>
+<td style="text-align: left;">Less than</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">&gt;=</td>
+<td style="text-align: left;">Greater than or equal to</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">&lt;=</td>
+<td style="text-align: left;">Less than or equal to</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">&lt;&gt;</td>
+<td style="text-align: left;">Not equal to</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Reference Operators</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Operator</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">:</td>
+<td style="text-align: left;">Range operator (defines a reference to a
+range of cells)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">,</td>
+<td style="text-align: left;">Union operator (combines two references
+into a single reference)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">(space)</td>
+<td style="text-align: left;">Intersection operator (returns a reference
+to the intersection of two ranges)</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+</ul>
+<h2 id="autofill">Autofill</h2>
+<p>Autofill helps to generate data for consecutive cells using
+formula(s) (pattern) in previous cells. To use autofill, select the
+cell(s) that have formulas (pattern) that you want to use to autofill
+other cells. Move the cursor to the lower right corner of the selected
+region and you will see a black solid plus sigh
+<strong><code>+</code></strong>. Drag the plus sign to a nearby cell
+will autofill a formula/datum.</p>
+<p><strong>Example:</strong> Suppose that you want to fill in the first
+10 natural numbers in cells A1 to A10. You may enter 1, 2 in A1 and A2
+respectively. Then select A1 and A2. Now move the mouse cursor to the
+lower right corner of the A2 cell and drag the solid plus sign
+<strong><code>+</code></strong> to the cell A10 will generate the
+numbers.</p>
+<p><img src="img/Autofill-Example.gif" alt="Autofill-Example" style="zoom: 67%;" /></p>
+<h2 id="homework-1">Homework 1</h2>
+<p><strong>Assignment:</strong> Create an array in Excel with 11 rows
+and 10 columns that has the following values in it.</p>
+<ol type="1">
+<li>Merge the first row in the array and enter the text “First 100
+numbers in a 10 by 10 table”.</li>
+<li>Fill in the first 100 numbers from left to right and top to bottom
+as shown in the following picture.
+<img src="img/ten-by-ten-table.png" alt="a table with the first 100 natural number placed in a ten-by-ten array" style="zoom: 87%;" /></li>
+</ol>
+<p><strong>Requirement:</strong> You must submit your work in excel
+using the link in Blackboard.</p>
+</body>
+</html>
